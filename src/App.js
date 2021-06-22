@@ -1,10 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
-import Home from './Home'
-import NewJourney from '../components/NewJourney'
-import JourneysInProgress from '../components/JourneysInProgress'
-import CompletedJourneys from '../components/CompletedJourneys'
-import FavoritedParks from '../components/FavoritedParks'
+import NavBar from '../components/NavBar';
+import Home from '../components/Home';
+import NewJourney from '../components/NewJourney';
+import JourneysInProgress from '../components/JourneysInProgress';
+import CompletedJourneys from '../components/CompletedJourneys';
+import FavoritedParks from '../components/FavoritedParks';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
