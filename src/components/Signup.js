@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Login extends Component {
+class Signup extends Component {
     render() {
         return (
             <form>
-                <h1>Login</h1>
+                <h1>Signup</h1>
                 <div>
                 {/* <label>Email </label> */}
                 <input type="text" name="email" placeholder="Email" />
@@ -19,4 +19,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Signup;
