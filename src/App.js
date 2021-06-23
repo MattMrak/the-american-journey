@@ -8,6 +8,8 @@ function App() {
         <h1>
           The American Journey
         </h1>
+        <button>Login</button>
+        <button>Signup</button>
       </header>
   );
 }
