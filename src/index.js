@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 import NavBar from './components/NavBar';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Logout from './components/Logout';
 import Home from './components/Home';
 import NewJourney from './components/NewJourney';
 import JourneysInProgress from './components/JourneysInProgress';
@@ -32,6 +33,7 @@ ReactDOM.render((
       <Route exact path="/" component={App} />
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/logout" component={Logout} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/newjourney" component={NewJourney} />
       <Route exact path="/journeysinprogress" component={JourneysInProgress} />

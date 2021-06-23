@@ -21,10 +21,10 @@ const NavBar = () => {
         <li>
           <NavLink to="/favoritedparks">Favorited Parks</NavLink>
         </li>
-        {/* <li style="float:right">
-          <a class="active" href="#about">About</a>
+        <li >
+          {/* <a class="active" href="#about">About</a> */}
           <NavLink to="/logout">Logout</NavLink>
-        </li> */}
+        </li>
       </ul>
     </div>
   );
