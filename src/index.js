@@ -11,6 +11,7 @@ import NewJourney from './components/NewJourney';
 import JourneysInProgress from './components/JourneysInProgress';
 import CompletedJourneys from './components/CompletedJourneys';
 import FavoritedParks from './components/FavoritedParks';
+import Login from './components/Login';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import reportWebVitals from './reportWebVitals';
 
@@ -33,6 +34,7 @@ ReactDOM.render((
       <Route exact path="/journeysinprogress" component={JourneysInProgress} />
       <Route exact path="/completedjourneys" component={CompletedJourneys} />
       <Route exact path="/favoritedparks" component={FavoritedParks} />
+      <Route exact path="/login" component={Login} />
     </div>
   </Router>),
   document.getElementById('root')
