@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import { useHistory } from "react-router-dom";
 
@@ -6,19 +5,20 @@ function App() {
 
   const history = useHistory();
   
-  const handleLogin = () =>{ 
+  const handleLogin = () => { 
     history.push("/login");
   }
 
-  const handleSignup = () =>{ 
+  const handleSignup = () => { 
     history.push("/signup");
   }
 
   return (
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <h1>The American</h1>
+        <img src={'https://lh3.googleusercontent.com/lruiay6zLDbJWiP4050qRfCA-mR_nH6d2he2Z864h9iPjUmqYuJPJSE--BU3nHY'} className="App-logo" alt="logo" />
         <h1>
-          The American Journey
+          Journey
         </h1>
         <button onClick={handleLogin}>Login</button>
         <button onClick={handleSignup}>Signup</button>
