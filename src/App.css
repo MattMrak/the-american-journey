@@ -8,7 +8,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIeTA9ASiHPgM1tzbqihDbV5ozJ9PffYFNAA&usqp=CAU");
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
