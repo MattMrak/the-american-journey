@@ -1,21 +1,27 @@
 class CompletedJourneysController < ApplicationController
     def index
-        if params[:user_id] && @user = User.find_by_id(params[:user_id])
-            @completed_journeys = @user.completed_journeys
-        else
-            @completed_journeys = CompletedJourney
-        end
+        @completed_journeys = CompletedJourney.all
+        render json: @completed_journeys, status: 200
+    end
+
+    def create
+        @journey_in_progress = CompletedJourney.create(completed_journey_params)
+        render json: @journeys_in_progress, status: 200
     end
 
     def show
-        @completed_journey = CompletedJourney.find_by_id(params[:id])
-        redirect_to completed_journeys_path if !@completed_journey
+        @completed_journey = CompletedJourney.all
+        render json: @completed_journeys, status: 200
     end
 
     def destroy
         @completed_journey = CompletedJourney.find(params[:id])
         @completed_journey.destroy
-        redirect_to completed_journeys_path
+    end
+
+    private
+    def completed_journey_params
+        params.require(:completed_journeys).permit(:title, :description, :park_id, :user_id, :journey_id)
     end
 
 end
