@@ -1,4 +1,4 @@
-export default function manageFavoritedParks(state = {
+export default function favoritedParksReducer(state = {
   favortiedParks: [],
 }, action) {
   switch(action.type){

@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import manageFavoritedParks from './reducers/manageFavoritedParks'
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
 import NavBar from './components/NavBar';
 import Signup from './components/Signup';
 import Login from './components/Login';
@@ -15,9 +16,24 @@ import JourneysInProgress from './components/JourneysInProgress';
 import CompletedJourneys from './components/CompletedJourneys';
 import FavoritedParks from './components/FavoritedParks';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import userReducer from './reducers/userReducer';
+import newJourneyReducer from './reducers/newJourneyReducer';
+import journeysInProgressReducer from './reducers/journeysInProgressReducer';
+import completedJourneysReducer from './reducers/completedJourneysReducer';
+import favoritedParksReducer from './reducers/favoritedParksReducer';
 // import reportWebVitals from './reportWebVitals';
 
-const store = createStore(manageFavoritedParks, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const rootReducer = combineReducers({
+  currentUser: userReducer,
+  newJourney: newJourneyReducer,
+  journeysInProgress: journeysInProgressReducer,
+  completedJourneys: completedJourneysReducer,
+  favoritedParks: favoritedParksReducer
+})
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>
