@@ -1,4 +1,4 @@
-class NewJourneyController < ApplicationController
+class JourneysInProgressController < ApplicationController
     def index
         if params[:user_id] && @user = User.find_by_id(params[:user_id])
             @journeys_in_progress = @user.journeys_in_progress
