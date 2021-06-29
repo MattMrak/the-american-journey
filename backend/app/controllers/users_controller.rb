@@ -1,24 +1,35 @@
 class UsersController < ApplicationController
-    def new
-        @user = User.new
+    before_action :set_user, only: [:show, :destroy]
+
+    def index
+      @users = User.all
+      render json: @users
+    end
+
+    def show
+      render json: @user
     end
 
     def create
-        @user = User.new(user_params)
-        if @user.save
-            # log them in 
-            # then redirect to show page
-            session[:user_id] = @user.id
-            # redirect to the show page
-            # redirect_to @user
-        else
-            render :new
-        end
+      @user = User.new(user_params)
+      if @user.save
+        render json: @user, status: :created, location: @user
+      else
+        render json: @user.errors, status: :unprocessable_entity
+      end
     end
 
-    private
+    def destroy
+      @user.destroy
+    end
+    
+  private
 
-    def user_params
+  def set_user
+        @user = User.find(params[:id])
+      end
+
+      def user_params
         params.require(:user).permit(:email, :password, :user_id)
-    end
-end
+      end
+  end
