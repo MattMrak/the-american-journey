@@ -1,21 +1,31 @@
 class FavoritedParksController < ApplicationController
-    def index
-        if params[:user_id] && @user = User.find_by_id(params[:user_id])
-            @favorited_parks = @user.favorited_parks
-        else
-            @favorited_parks = FavoritedPark
-        end
-    end
+    before_action :set_params, only: [:show, :update, :destroy]
 
-    def show
-        @favorited_park = FavoritedPark.find_by_id(params[:id])
-        redirect_to favorited_parks_path if !@favorited_park
-    end
+  def index
+    @favorited_parks = FavoritedPark.all
+    render json: @favorited_parks, only: [:user_id, :park_id], status: 200
+  end
 
-    def destroy
-        @favorited_park = FavoritedPark.find(params[:id])
-        @favorited_park.destroy
-        redirect_to favorited_parks_path
-    end
+  def create
+    @favorited_park = FavoritedPark.create(favorited_park_params)
+    render json: @favorited_park, status: 200
+  end
 
+  def show
+    render json: @favorited_park, status: 200
+  end
+
+  def destroy
+    @favorited_park.destroy
+  end
+
+  private
+
+  def favorited_park_params
+    params.require(:favorited_park).permit(:user_id, :park_id)
+  end
+
+  def set_params
+    @favorited_park = FavoritedPark.find(params[:id])
+  end
 end
