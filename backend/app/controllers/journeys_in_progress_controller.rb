@@ -1,21 +1,27 @@
 class JourneysInProgressController < ApplicationController
+
     def index
-        if params[:user_id] && @user = User.find_by_id(params[:user_id])
-            @journeys_in_progress = @user.journeys_in_progress
-        else
-            @journeys_in_progress = JourneyInProgress
-        end
+        @journeys_in_progress = NewJourney.all
+        render json: @journeys_in_progress, status: 200
+    end
+
+    def create
+        @journey_in_progress = JourneyInProgress.create(journeys_in_progress_params)
+        render json: @journeys_in_progress, status: 200
     end
 
     def show
-        @journey_in_progress = JourneyInProgress.find_by_id(params[:id])
-        redirect_to journeys_in_progress_path if !@journey_in_progress
+        @journeys_in_progress = JourneyInProgress.all
+        render json: @journeys_in_progress, status: 200
     end
 
     def destroy
-        @journey_in_progress = JourneyInProgress.find(params[:id])
-        @journey_in_progress.destroy
-        redirect_to journeys_in_progress_path
+        @journeys_in_progress.destroy
+    end
+
+    private
+    def journeys_in_progress_params
+        params.require(:journeys_in_progress).permit(:title, :description, :park_id, :user_id, :journey_id)
     end
 
 end
