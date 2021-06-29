@@ -1,4 +1,4 @@
 class FavoritedParkSerializer < ActiveModel::Serializer
-    attributes :id, :park
+    attributes :user_id, :park_id
     belongs_to :user
 end
