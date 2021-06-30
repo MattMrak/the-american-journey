@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { addUser, addUserBE } from '../reducers/actions';
+import '../App.css';
 // import { connect } from 'react-redux';
+// import { addUser, addUserBE } from '../reducers/actions';
 class Signup extends Component {
 
     state = {
@@ -23,19 +24,22 @@ class Signup extends Component {
     render() {
         return (
             <div>
+              <header className="App-header">
                 <h1>Signup</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="user">Email</label>
+                    <label htmlFor="user"></label>
                     <input
                         onChange={this.handleChange}
                         type="text"
                         email="user"
                         // value={this.state.user}
+                        value={this.user}
                         autoComplete="off"
                         id="user"
+                        placeholder="Email"
                     />
                     <div>
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password"></label>
                         <input
                             onChange={this.handleChange}
                             type="text"
@@ -43,10 +47,12 @@ class Signup extends Component {
                             // value={this.state.user}
                             autoComplete="off"
                             id="user"
+                            placeholder="Password"
                         />
                     </div>
-                    <input type="submit" value="Submit" />
-                </form>
+                    {/* <input type="submit" value="Submit" /> */}
+                    <button>Submit</button>                </form>
+              </header>
             </div>
 
         );
@@ -59,6 +65,35 @@ class Signup extends Component {
 //     }
 // }
 
+export const addUserBE = (email) => {
+    console.log("from addUserBE", email)
+    return (dispatch) => {
+      fetch('http://localhost:3001/users',{
+             method:'POST',
+             headers: { 
+                 'Content-type': 'application/json',
+                 'accept': 'application/json'
+             },
+            body: JSON.stringify({
+                email: email
+              })
+      })
+        .then(resp => resp.json())
+        .then(user => {
+        dispatch(addUser(user))
+      })
+    }
+  }
+  
+  export const addUser = (newUser) => {
+    return {
+        type: "ADD_USER",
+        payload: newUser
+      }
+  }
+
 export default Signup;
 
-// export default connect(null, { addUserBE, addUser, mapDispatchToProps })(Signup)
+// export default connect(null, { addUserBE, addUser, mapDispatchToProps })(Signup);
+
+// export default connect(null, mapDispatchToProps)(Signup);

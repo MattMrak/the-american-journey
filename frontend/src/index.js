@@ -35,14 +35,17 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
-ReactDOM.render(
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>,
+//   document.getElementById('root')
+// );
+
+ReactDOM.render((
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
-);
-
-ReactDOM.render((
   <Router>
     <div>
       <NavBar/>
