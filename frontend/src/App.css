@@ -42,7 +42,12 @@ button {
 .Wrapper {
   text-align: center;
   color: #FEFEFE;
+  /* color: linear-gradient(#B42033, #FEFEFE, #3C3B6E);   */
   position: fixed;
   bottom: 0;
   width: 100%;
+  /* text-transform: uppercase; */
+	/* background: linear-gradient(#B42033, #FEFEFE, #3C3B6E);
+	background-clip: text;
+	-webkit-text-fill-color: transparent; */
 }
