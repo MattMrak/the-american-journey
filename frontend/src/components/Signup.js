@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../App.css';
-// import { connect } from 'react-redux';
-// import { addUser, addUserBE } from '../reducers/actions';
+import Footer from './Footer';
+import { connect } from 'react-redux';
+// import '../index.js'
+import { addUser, addUserBE } from '../reducers/actions';
 class Signup extends Component {
 
     state = {
@@ -51,49 +53,50 @@ class Signup extends Component {
                         />
                     </div>
                     {/* <input type="submit" value="Submit" /> */}
-                    <button>Submit</button>                </form>
+                    <button>Submit</button>
+                  </form>
               </header>
+              <Footer/>
             </div>
-
         );
     }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         users: () => { dispatch(addUserBE) }
-//     }
-// }
-
-export const addUserBE = (email) => {
-    console.log("from addUserBE", email)
-    return (dispatch) => {
-      fetch('http://localhost:3001/users',{
-             method:'POST',
-             headers: { 
-                 'Content-type': 'application/json',
-                 'accept': 'application/json'
-             },
-            body: JSON.stringify({
-                email: email
-              })
-      })
-        .then(resp => resp.json())
-        .then(user => {
-        dispatch(addUser(user))
-      })
-    }
-  }
-  
-  export const addUser = (newUser) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        type: "ADD_USER",
-        payload: newUser
-      }
-  }
+        users: () => { dispatch(addUserBE) }
+    }
+}
 
-export default Signup;
+// export const addUserBE = (email) => {
+//     console.log("from addUserBE", email)
+//     return (dispatch) => {
+//       fetch('http://localhost:3001/users',{
+//              method:'POST',
+//              headers: { 
+//                  'Content-type': 'application/json',
+//                  'accept': 'application/json'
+//              },
+//             body: JSON.stringify({
+//                 email: email
+//               })
+//       })
+//         .then(resp => resp.json())
+//         .then(user => {
+//         dispatch(addUser(user))
+//       })
+//     }
+//   }
+  
+//   export const addUser = (newUser) => {
+//     return {
+//         type: "ADD_USER",
+//         payload: newUser
+//       }
+//   }
 
-// export default connect(null, { addUserBE, addUser, mapDispatchToProps })(Signup);
+// export default Signup;
+
+export default connect(null, { addUserBE, addUser, mapDispatchToProps })(Signup);
 
 // export default connect(null, mapDispatchToProps)(Signup);

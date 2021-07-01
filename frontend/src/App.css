@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #FEFEFE;
 }
 
 .App-logo {
@@ -18,7 +19,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FEFEFE;
 }
 
 .App-link {
@@ -26,10 +27,22 @@
 }
 
 button {
-  background-color: white;
+  background-color: #FEFEFE;
   color: black;
   padding: 5px 25px;
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
+}
+
+/* h1 {
+  text-shadow: 2px 2px 5px #3C3B6E;
+} */
+
+.Wrapper {
+  text-align: center;
+  color: #FEFEFE;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

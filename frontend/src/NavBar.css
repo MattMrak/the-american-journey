@@ -3,7 +3,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #FEFEFE;
+  position: fixed;
 
   /* position: -webkit-sticky;
   position: sticky;
@@ -21,7 +22,9 @@ li {
 
 li a {
   display: block;
-  color: white;
+  /* color: #696969; */
+  color: #a9a9a9;  
+  /* color: black;  */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

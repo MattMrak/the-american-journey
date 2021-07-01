@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Footer from './Footer';
 // import { connect } from 'react-redux';
 // import { addUser, addUserBE } from '../reducers/actions';
 class Login extends Component {
@@ -54,6 +55,7 @@ class Login extends Component {
                     <button>Submit</button>
                 </form>
               </header>
+              <Footer/>
             </div>
 
         );
