@@ -20,6 +20,7 @@ const Home = () => {
                         Take on the challenge to visit all of the United States' National Parks!
                     </h3>
                 </div>
+                {/* <br></br> */}
                 <button onClick={handleStart}>Get Started</button>
                 <br></br>
             </header>

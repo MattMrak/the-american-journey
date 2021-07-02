@@ -18,4 +18,7 @@ const JourneysInProgress = () => {
     );
 }
 
+// For each journey in progress, add a button to 
+// edit/delete the journey or mark as completed.
+
 export default JourneysInProgress;
