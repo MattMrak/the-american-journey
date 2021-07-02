@@ -5,6 +5,7 @@ ul {
   overflow: hidden;
   background-color: #FEFEFE;
   position: fixed;
+  width: 100%;
 
   /* position: -webkit-sticky;
   position: sticky;
