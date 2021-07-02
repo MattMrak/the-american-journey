@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+b = NewJourney.new(title: "test", description: "testt", journey_id: 1, user_id: 1, park_id: 1)

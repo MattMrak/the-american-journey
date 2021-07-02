@@ -18,8 +18,8 @@ class Signup extends Component {
     
     handleSubmit = (evt) => {
         evt.preventDefault()
-        // this.props.addUser(this.state)
-        // this.props.addUserBE(this.state.user)
+        this.props.addUser(this.state)
+        this.props.addUserBE(this.state.user)
         this.props.history.push(`/home`)
       }
 
