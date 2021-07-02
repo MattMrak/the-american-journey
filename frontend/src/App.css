@@ -51,3 +51,8 @@ button {
 	background-clip: text;
 	-webkit-text-fill-color: transparent; */
 }
+
+.app-descr {
+  border: solid;
+  background: #708090;
+}
