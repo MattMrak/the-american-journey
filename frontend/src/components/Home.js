@@ -5,7 +5,7 @@ import Footer from './Footer';
 const Home = () => {
     const history = useHistory();
     const handleStart = () => { 
-        history.push("/journeysinprogress");
+        history.push("/allparks");
     }
     return (
         <div>
@@ -15,9 +15,10 @@ const Home = () => {
                 <h1>Journey</h1>
                 <div className="app-descr">
                     <h3>
-                        This app makes planning a roadtrip to National Parks simple and fun. 
-                        It also tracks completed journeys so you will always know which National Parks you have visited.
-                        Take on the challenge to visit all of the United States' National Parks!
+                        The American Journey makes visiting National Parks simple and fun.
+                        Find useful information on the United States National Parks, as well as track which parks you have visited.
+                        If you come across a park that you have not visited but want to save for easier finding later on, add it to the favorited parks list.
+                        Take on the challenge to visit all of the United States National Parks!
                     </h3>
                 </div>
                 {/* <br></br> */}

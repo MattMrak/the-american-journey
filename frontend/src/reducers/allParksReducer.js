@@ -1,6 +1,6 @@
 import React from 'react';
 
-const journeysInProgressReducer = () => {
+const allParksReducer = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const journeysInProgressReducer = () => {
     );
 }
 
-export default journeysInProgressReducer;
+export default allParksReducer;

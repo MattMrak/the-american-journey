@@ -1,6 +1,6 @@
 import React from 'react';
 
-const completedJourneysReducer = () => {
+const visitedParksReducer = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const completedJourneysReducer = () => {
     );
 }
 
-export default completedJourneysReducer;
+export default visitedParksReducer;

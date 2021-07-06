@@ -10,49 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 5) do
+ActiveRecord::Schema.define(version: 4) do
 
-  create_table "completed_journeys", force: :cascade do |t|
-    t.string "title"
+  create_table "all_parks", force: :cascade do |t|
+    t.string "full_name"
     t.string "description"
-    t.integer "user_id"
-    t.integer "journey_id"
-    t.integer "park_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "contacts"
+    t.string "entrance_fees"
+    t.string "operating_hours"
+    t.string "addresses"
   end
 
   create_table "favorited_parks", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "park_id"
-  end
-
-  create_table "journeys_in_progress", force: :cascade do |t|
-    t.string "title"
+    t.string "full_name"
     t.string "description"
+    t.string "contacts"
+    t.string "entrance_fees"
+    t.string "operating_hours"
+    t.string "addresses"
     t.integer "user_id"
-    t.integer "journey_id"
-    t.integer "park_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "new_journeys", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.integer "user_id"
-    t.integer "journey_id"
-    t.integer "park_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.string "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "visited_parks", force: :cascade do |t|
+    t.string "full_name"
+    t.string "description"
+    t.string "addresses"
+    t.integer "user_id"
   end
 
 end

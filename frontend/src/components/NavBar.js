@@ -10,13 +10,10 @@ const NavBar = () => {
           <NavLink to="/home">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/newjourney">New Journey</NavLink>
+          <NavLink to="/allparks">All Parks</NavLink>
         </li>
         <li>
-          <NavLink to="/journeysinprogress">Journeys In Progress</NavLink>
-        </li>
-        <li>
-          <NavLink to="/completedjourneys">Completed Journeys</NavLink>
+          <NavLink to="/visitedparks">Visited Parks</NavLink>
         </li>
         <li>
           <NavLink to="/favoritedparks">Favorited Parks</NavLink>

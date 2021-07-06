@@ -11,23 +11,20 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Logout from './components/Logout';
 import Home from './components/Home';
-import NewJourney from './components/NewJourney';
-import JourneysInProgress from './components/JourneysInProgress';
-import CompletedJourneys from './components/CompletedJourneys';
+import AllParks from './components/AllParks';
+import VisitedParks from './components/VisitedParks';
 import FavoritedParks from './components/FavoritedParks';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import userReducer from './reducers/userReducer';
-import newJourneyReducer from './reducers/newJourneyReducer';
-import journeysInProgressReducer from './reducers/journeysInProgressReducer';
-import completedJourneysReducer from './reducers/completedJourneysReducer';
+import allParksReducer from './reducers/allParksReducer';
+import visitedParksReducer from './reducers/visitedParksReducer';
 import favoritedParksReducer from './reducers/favoritedParksReducer';
 // import reportWebVitals from './reportWebVitals';
 
 const rootReducer = combineReducers({
   currentUser: userReducer,
-  newJourney: newJourneyReducer,
-  journeysInProgress: journeysInProgressReducer,
-  completedJourneys: completedJourneysReducer,
+  allParksReducer: allParksReducer,
+  visitedParksReducer: visitedParksReducer,
   favoritedParks: favoritedParksReducer
 })
 
@@ -54,9 +51,8 @@ ReactDOM.render((
       <Route exact path="/login" component={Login} />
       <Route exact path="/logout" component={Logout} />
       <Route exact path="/home" component={Home} />
-      <Route exact path="/newjourney" component={NewJourney} />
-      <Route exact path="/journeysinprogress" component={JourneysInProgress} />
-      <Route exact path="/completedjourneys" component={CompletedJourneys} />
+      <Route exact path="/allparks" component={AllParks} />
+      <Route exact path="/visitedparks" component={VisitedParks} />
       <Route exact path="/favoritedparks" component={FavoritedParks} />
     </div>
   </Router>),

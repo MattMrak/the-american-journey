@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Footer from './Footer';
-class CompletedJourneys extends Component {
+
+class VisitedParks extends Component {
     render() {
         return (
             <div>
                 <header className="App-header">
-                    <h1>Completed Journeys</h1>
+                    <h1>Visited Parks</h1>
                 </header>
                 <Footer/>
             </div>
@@ -14,4 +15,4 @@ class CompletedJourneys extends Component {
     }
 }
 
-export default CompletedJourneys;
+export default VisitedParks;
