@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Footer from './Footer';
-import { fetchMap, addMap } from '../reducers/actions';
+import { fetchMap } from '../reducers/actions';
 // import { connect } from 'react-redux';
 class NewJourney extends Component {
     // state = {
@@ -14,7 +14,6 @@ class NewJourney extends Component {
                     <h1>New Journey</h1>
                 </header>
                 {fetchMap}
-                {addMap}
                 <Footer/>
             </div>
         );
