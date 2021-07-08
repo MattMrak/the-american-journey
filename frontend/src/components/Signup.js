@@ -3,7 +3,7 @@ import '../App.css';
 import Footer from './Footer';
 // import { connect } from 'react-redux';
 // import '../index.js'
-import { addUser, addUserBE } from '../reducers/actions';
+import { addUser, addUserBE } from '../actions/users';
 class Signup extends Component {
     
     state = {

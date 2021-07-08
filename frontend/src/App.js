@@ -11,7 +11,7 @@ import Home from './components/Home';
 import AllParks from './components/AllParks';
 import VisitedParks from './components/VisitedParks';
 import FavoritedParks from './components/FavoritedParks';
-import { fetchAllParks } from './reducers/actions';
+import { fetchAllParks } from './actions/allParks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import './index.js'
