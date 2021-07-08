@@ -40,9 +40,6 @@ export const fetchAllParks = (allParks) => {
                 'Content-type': 'application/json',
                 'accept': 'application/json'
             },
-          body: JSON.stringify({
-              allParks: allParks
-            })
     })
       .then(resp => resp.json())
       .then(allParks => {
