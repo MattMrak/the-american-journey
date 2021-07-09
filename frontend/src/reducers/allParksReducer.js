@@ -1,12 +1,10 @@
 const initialState = {
     allParks: [],
-
 }
-
 
 const allParksReducer = (state = initialState, action) => {
     switch(action.type){
-        case "ADD_PARK":
+        case "ADD_PARKS":
             // return state.concat(action.payload)
             return {
                 ...state,
@@ -16,6 +14,5 @@ const allParksReducer = (state = initialState, action) => {
             return state
     }
 }
-
 
 export default allParksReducer;
