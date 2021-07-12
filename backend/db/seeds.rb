@@ -13,5 +13,7 @@
 # t.string "operating_hours"
 # t.string "addresses"
 # all parks ======= :id, :full_name, :description, :contacts, :entrance_fees, :operating_hours, :addresses
+AllPark.destroy_all
+AllPark.reset_pk_sequence
 
 AllPark.create(full_name: "Garfield Grove", description: "Hidden gem in the heart of Franklin Square", contacts: "516-790-9462", entrance_fees: "$5.00", operating_hours: "9am - 5pm", addresses: "902 Garfield Street")
