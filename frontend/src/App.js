@@ -80,12 +80,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    state
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     state
+//   }
+// }
 
 // export default App;
 
-export default connect(mapStateToProps, {fetchAllParks})(App);
+export default connect(null, {fetchAllParks})(App);

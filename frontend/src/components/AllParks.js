@@ -4,9 +4,8 @@ import Footer from './Footer';
 import {connect} from "react-redux"
 import { fetchAllParks } from '../actions/allParks';
 
-
-// For each journey in progress, add a button to 
-// edit/delete the journey or mark as completed.
+// For each park, add a button to 
+// favorite/mark_visited.
 
 class AllParks extends Component {
     
@@ -14,18 +13,19 @@ class AllParks extends Component {
         allParks: []
     }
 
-    componentDidMount() {
-        // this.state.fetchAllParks()
-        this.props.fetchAllParks()
-    }
-
+    // componentDidMount() {
+    //     this.props.fetchAllParks()
+    //     // debugger
+    // }
+    
     render() {
-        // const allParks = this.props.allParks.map(aP => <AllParks allParks={aP} />)
-        const allParks = this.props.allParks
+        console.log("You are hitting here")
+        const allParks = this.props.allParks.map(park => <h1>{park.full_name}</h1>)
         return (
             <div>
                 <header className="App-header">
                     <h1> {allParks} </h1>
+                    {/* <h1> {allParks} </h1> */}
                 </header>
                 <Footer/>
             </div>
@@ -34,10 +34,9 @@ class AllParks extends Component {
 }
 
 const mapStateToProps = (stateFromStore) => {
-    return{
-        allParks: stateFromStore.allParks
+    return {
+        allParks: stateFromStore.allParksReducer.allParks
     }
 }
 
-// export default AllParks;
 export default connect(mapStateToProps, { fetchAllParks })(AllParks)
