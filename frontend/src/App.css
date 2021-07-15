@@ -60,20 +60,7 @@ button {
   padding: 15px;
 }
 
-/* .AllParksListDiv {
-  color: #FEFEFE;
-  background-image: url("https://cdn.shopify.com/s/files/1/1439/4166/files/american-flag-royalty-free-image-141653762-1560206611-1600-2_1600x315.jpg?v=1566534066");
-  background-size: cover;
-  border-color: #3C3B6E;
-  text-align: center;
-  border-style: solid;
-  width: 475px;
-} */
-
 .AllParksListDiv {
-  /* color: #FEFEFE; */
-  /* background-image: url("https://cdn.shopify.com/s/files/1/1439/4166/files/american-flag-royalty-free-image-141653762-1560206611-1600-2_1600x315.jpg?v=1566534066"); */
-  /* background-size: cover; */
   background: linear-gradient(#B42033, #FEFEFE, #3C3B6E);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
