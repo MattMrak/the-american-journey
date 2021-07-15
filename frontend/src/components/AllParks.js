@@ -12,20 +12,26 @@ class AllParks extends Component {
     state = {
         allParks: []
     }
-
-    // componentDidMount() {
-    //     this.props.fetchAllParks()
-    //     // debugger
-    // }
     
     render() {
         console.log("You are hitting here")
-        const allParks = this.props.allParks.map(park => <h1>{park.full_name}</h1>)
+        const allParksNames = this.props.allParks.map(park => <h1>{park.full_name}</h1>)
+        const allParksDescriptions = this.props.allParks.map(park => <p>{park.description}</p>)
+        const allParksContacts = this.props.allParks.map(park => <p>{park.contacts}</p>)
+        const allParksEntranceFees = this.props.allParks.map(park => <p>{park.entrance_fees}</p>)
+        const allParksOperatingHours = this.props.allParks.map(park => <p>{park.operating_hours}</p>)
+        const allParksAddresses = this.props.allParks.map(park => <p>{park.addresses}</p>)
         return (
             <div>
                 <header className="App-header">
-                    <h1> {allParks} </h1>
-                    {/* <h1> {allParks} </h1> */}
+                    <div className="AllParksListDiv">
+                        {allParksNames}
+                        Description: {allParksDescriptions}
+                        Contacts: {allParksContacts}
+                        Entrance Fees: {allParksEntranceFees}
+                        Operating Hours: {allParksOperatingHours}
+                        Addresses: {allParksAddresses}
+                    </div>
                 </header>
                 <Footer/>
             </div>

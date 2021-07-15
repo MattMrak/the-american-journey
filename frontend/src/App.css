@@ -59,3 +59,13 @@ button {
   width: 650px;
   padding: 15px;
 }
+
+.AllParksListDiv {
+  color: #FEFEFE;
+  background: #3C3B6E;
+  border-color: #B42033;;
+  text-align: center;
+  border-style: solid;
+  width: 475px;
+  /* padding: 5px; */
+}

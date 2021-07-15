@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
   currentUser: userReducer,
   allParksReducer: allParksReducer,
   visitedParksReducer: visitedParksReducer,
-  favoritedParks: favoritedParksReducer
+  favoritedParksReducer: favoritedParksReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
