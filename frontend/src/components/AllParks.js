@@ -24,13 +24,15 @@ class AllParks extends Component {
         return (
             <div>
                 <header className="App-header">
-                    <div className="AllParksListDiv">
-                        {allParksNames}
-                        Description: {allParksDescriptions}
-                        Contacts: {allParksContacts}
-                        Entrance Fees: {allParksEntranceFees}
-                        Operating Hours: {allParksOperatingHours}
-                        Addresses: {allParksAddresses}
+                    <div className="AllParksListDivTopLevel">
+                        <div className="AllParksListDiv">
+                            {allParksNames}
+                            Description: {allParksDescriptions}
+                            Contacts: {allParksContacts}
+                            Entrance Fees: {allParksEntranceFees}
+                            Operating Hours: {allParksOperatingHours}
+                            Addresses: {allParksAddresses}
+                        </div>
                     </div>
                 </header>
                 <Footer/>
