@@ -14,13 +14,12 @@ class AllParks extends Component {
     }
     
     render() {
-        console.log("You are hitting here")
-        const allParksNames = this.props.allParks.map(park => <h1>{park.full_name}</h1>)
-        const allParksDescriptions = this.props.allParks.map(park => <p>{park.description}</p>)
-        const allParksContacts = this.props.allParks.map(park => <p>{park.contacts}</p>)
-        const allParksEntranceFees = this.props.allParks.map(park => <p>{park.entrance_fees}</p>)
-        const allParksOperatingHours = this.props.allParks.map(park => <p>{park.operating_hours}</p>)
-        const allParksAddresses = this.props.allParks.map(park => <p>{park.addresses}</p>)
+        const allParksNames = this.props.allParks.map(park => <h1>{park.data[0].fullName}</h1>)
+        const allParksDescriptions = this.props.allParks.map(park => <p>{park.data[0].description}</p>)
+        const allParksContacts = this.props.allParks.map(park => <p>{park.data[0].contacts.phoneNumbers[0].phoneNumber}</p>)
+        const allParksEntranceFees = this.props.allParks.map(park => <p>{park.data[0].entranceFees[0].cost}</p>)
+        const allParksOperatingHours = this.props.allParks.map(park => <p>{park.data[0].operatingHours[0].standardHours.wednesday}</p>)
+        const allParksAddresses = this.props.allParks.map(park => <p>{park.data[0].addresses[0].line1}</p>)
         return (
             <div>
                 <header className="App-header">
