@@ -3,6 +3,7 @@ import '../App.css';
 import Footer from './Footer';
 import {connect} from "react-redux"
 import { fetchAllParks } from '../actions/allParks';
+import FavoriteButton from './FavoriteButton';
 
 // For each park, add a button to 
 // favorite/mark_visited.
@@ -31,6 +32,7 @@ class AllParks extends Component {
                             Entrance Fees: {allParksEntranceFees}
                             Operating Hours: {allParksOperatingHours}
                             Addresses: {allParksAddresses}
+                            <FavoriteButton />
                         </div>
                     </div>
                 </header>
