@@ -26,7 +26,6 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchAllParks()
-    this.props.fetchPostFavParks()
   }
 
   render() {

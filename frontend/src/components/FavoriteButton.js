@@ -12,6 +12,10 @@ class FavoriteButton extends Component {
     handleFavorite = () => {
         fetchPostFavParks()
     }
+
+    componentDidMount() {
+        this.props.fetchPostFavParks()
+    }
     
     render() {
         return (
