@@ -9,11 +9,10 @@ class FavoriteButton extends Component {
         favoritedParks: []
     }
     
-    handleFavorite = () => {
-        fetchPostFavParks()
-    }
-
-    componentDidMount() {
+    handleFavorite = (evt) => {
+        this.setState({
+            [evt.target.id]: evt.target.id
+        })
         this.props.fetchPostFavParks()
     }
     

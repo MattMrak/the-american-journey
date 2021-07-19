@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import '../App.css';
 import Footer from './Footer';
 class FavoritedParks extends Component {
+    componentDidMount() {
+        this.props.fetchPostFavParks()
+    }
     render() {
         return (
             <div>

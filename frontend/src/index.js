@@ -9,13 +9,15 @@ import userReducer from './reducers/userReducer';
 import allParksReducer from './reducers/allParksReducer';
 import visitedParksReducer from './reducers/visitedParksReducer';
 import favoritedParksReducer from './reducers/favoritedParksReducer';
+import favoriteButtonReducer from './reducers/favoriteButtonReducer';
 // import reportWebVitals from './reportWebVitals';
 
 const rootReducer = combineReducers({
   currentUser: userReducer,
   allParksReducer: allParksReducer,
   visitedParksReducer: visitedParksReducer,
-  favoritedParksReducer: favoritedParksReducer
+  favoritedParksReducer: favoritedParksReducer,
+  favoriteButtonReducer: favoriteButtonReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
