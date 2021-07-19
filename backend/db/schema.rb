@@ -28,13 +28,11 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "entranceFees"
     t.string "operatingHours"
     t.string "addresses"
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.string "user_id"
   end
 
   create_table "visited_parks", force: :cascade do |t|

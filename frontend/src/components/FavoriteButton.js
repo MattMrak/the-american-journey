@@ -6,7 +6,7 @@ import { fetchPostFavParks } from '../actions/favoriteButton';
 class FavoriteButton extends Component {
 
     state = {
-        favoritedParks: []
+        favoritedParks: [],
     }
     
     handleFavorite = (evt) => {

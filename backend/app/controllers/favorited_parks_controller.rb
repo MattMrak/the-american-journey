@@ -8,6 +8,7 @@ class FavoritedParksController < ApplicationController
   end
 
   def create
+    # binding.pry
     @favorited_park = FavoritedPark.create(favorited_park_params)
     render json: @favorited_parks, status: 200
   end
@@ -24,7 +25,7 @@ class FavoritedParksController < ApplicationController
   private
 
   def favorited_park_params
-    params.require(:favorited_park).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
+    params.require(:favorited_parks).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
   end
 
   def set_params

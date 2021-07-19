@@ -12,6 +12,7 @@ export const fetchPostFavParks = () => {
         })
         .then(resp => resp.json())
         .then(favoritedParks => {
+          // debugger
           dispatch({
             type: "POST_FAVORITED_PARKS",
             payload: favoritedParks

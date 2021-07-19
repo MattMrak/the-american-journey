@@ -7,7 +7,7 @@ class CreateFavoritedParks < ActiveRecord::Migration[6.1]
         t.string :entranceFees
         t.string :operatingHours
         t.string :addresses
-        t.integer :user_id
+        # t.integer :user_id
       end
     end
 end
