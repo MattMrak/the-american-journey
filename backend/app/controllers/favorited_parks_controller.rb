@@ -26,6 +26,7 @@ class FavoritedParksController < ApplicationController
 
   def favorited_park_params
     params.permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
+    # params.require(:favorited_park).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
   end
 
   def set_params
