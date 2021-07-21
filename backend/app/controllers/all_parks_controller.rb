@@ -17,7 +17,7 @@ class AllParksController < ApplicationController
 
     private
     def all_parks_params
-        params.require(:all_parks).permit(:id, :full_name, :description, :contacts, :entrance_fees, :operating_hours, :addresses)
+        params.require(:all_parks).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
     end
 
 end

@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 4) do
 
   create_table "all_parks", force: :cascade do |t|
-    t.string "full_name"
+    t.string "fullName"
     t.string "description"
     t.string "contacts"
-    t.string "entrance_fees"
-    t.string "operating_hours"
+    t.string "entranceFees"
+    t.string "operatingHours"
     t.string "addresses"
   end
 
@@ -36,10 +36,12 @@ ActiveRecord::Schema.define(version: 4) do
   end
 
   create_table "visited_parks", force: :cascade do |t|
-    t.string "full_name"
+    t.string "fullName"
     t.string "description"
+    t.string "contacts"
+    t.string "entranceFees"
+    t.string "operatingHours"
     t.string "addresses"
-    t.integer "user_id"
   end
 
 end
