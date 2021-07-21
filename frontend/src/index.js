@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import userReducer from './reducers/userReducer';
 import allParksReducer from './reducers/allParksReducer';
 import visitedParksReducer from './reducers/visitedParksReducer';
+import visitedButtonReducer from './reducers/visitedButtonReducer';
 import favoritedParksReducer from './reducers/favoritedParksReducer';
 import favoriteButtonReducer from './reducers/favoriteButtonReducer';
 // import reportWebVitals from './reportWebVitals';
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   currentUser: userReducer,
   allParksReducer: allParksReducer,
   visitedParksReducer: visitedParksReducer,
+  visitedButtonReducer: visitedButtonReducer,
   favoritedParksReducer: favoritedParksReducer,
   favoriteButtonReducer: favoriteButtonReducer
 })
