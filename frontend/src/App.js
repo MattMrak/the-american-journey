@@ -11,7 +11,7 @@ import AllParks from './components/AllParks';
 import VisitedParks from './components/VisitedParks';
 import FavoritedParks from './components/FavoritedParks';
 import { fetchAllParks } from './actions/allParks';
-import { fetchPostFavParks } from './actions/favoriteButton';
+import { fetchFavoritedParks } from './actions/favoritedParks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -26,6 +26,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchAllParks()
+    this.props.fetchFavoritedParks()
   }
 
   render() {
@@ -51,4 +52,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, { fetchAllParks , fetchPostFavParks })(App);
+export default connect(null, { fetchAllParks , fetchFavoritedParks })(App);

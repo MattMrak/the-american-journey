@@ -74,3 +74,17 @@ button {
   background: rgba(0, 0, 0, 0.4);
   border-radius: 25px;
 }
+
+.FavoritedParksListDiv {
+  text-align: center;
+  border-radius: 25px;
+  border-color: #3C3B6E;
+  border-style: solid;
+  /* width: 475px; */
+  padding: 15px;
+}
+
+.FavoritedParksListDivTopLevel {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+}

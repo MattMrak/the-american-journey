@@ -1,12 +1,17 @@
-export default function favoritedParksReducer(state = {
-  favortiedParks: [],
-}, action) {
+const initialState = {
+  favoritedParks: [],
+}
+
+const favoritedParksReducer = (state = initialState, action) => {
   switch(action.type){
-    case "ADD_PARK":
-      return {
-        favoritedParks: state.favoritedParks.concat(action.payload)
-      }
-    default:
-      return state
+      case "GET_FAVORITED_PARKS":
+          return {
+              ...state,
+              favoritedParks: [...state.favoritedParks, ...action.payload]
+          }
+          default: 
+          return state
   }
-};
+}
+
+export default favoritedParksReducer;

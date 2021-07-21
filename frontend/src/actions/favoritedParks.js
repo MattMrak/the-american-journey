@@ -1,43 +1,13 @@
-export const fetchFavoritedToBE = (favorite) => {
-    console.log("from fetchFavoritedToBE", favorite)
-    return (dispatch) => {
-      fetch('http://localhost:3001/favorited_parks',{
-              method:'POST',
-              headers: { 
-                  'Content-type': 'application/json',
-                  'accept': 'application/json'
-              },
-            body: JSON.stringify({
-                favorite: favorite
-              })
+export const fetchFavoritedParks = () => {
+  return (dispatch) => {
+    fetch("http://localhost:3001/favorited_parks")
+      .then(resp => resp.json())
+      .then(favoritedParks => {
+        dispatch({
+          type: "GET_FAVORITED_PARKS",
+          payload: favoritedParks
+        })
+        console.log("from fetchFavoritedParks", favoritedParks)
       })
-        .then(resp => resp.json())
-        .then(favorite => {
-        dispatch(addFavorite(favorite))
-      })
-    }
-}
-  
-export const addFavorite = (newFavorite) => {
-    return {
-        type: "ADD_FAVORITE",
-        payload: newFavorite
-      }
-}
-  
-export const fetchFavoritedToFE = (favorite) => {
-    console.log("from fetchMapToBE", favorite)
-    return (dispatch) => {
-      fetch('http://localhost:3001/favorited_parks',{
-              method:'GET',
-              headers: { 
-                  'Content-type': 'application/json',
-                  'accept': 'application/json'
-              }
-      })
-        .then(resp => resp.json())
-        .then(favorite => {
-        dispatch(favorite)
-      })
-    }
+  }
 }
