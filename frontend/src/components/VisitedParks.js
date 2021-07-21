@@ -37,7 +37,7 @@ class VisitedParks extends Component {
 
 const mapStateToProps = (stateFromStore) => {
     return {
-        favoritedParks: stateFromStore.favoritedParksReducer.favoritedParks
+        visitedParks: stateFromStore.visitedParksReducer.visitedParks
     }
 }
 
