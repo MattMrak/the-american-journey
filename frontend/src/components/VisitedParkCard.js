@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import FavoriteButton from './FavoriteButton';
 
 class VisitedParkCard extends Component {
     render() {
@@ -17,6 +18,7 @@ class VisitedParkCard extends Component {
                     <p>Entrance Fees: {this.props.entranceFees}</p>
                     <p>Operating Hours: {this.props.operatingHours}</p>
                     <p>Addresses: {this.props.addresses}</p>
+                    <FavoriteButton />
                     <button>Delete</button>
                     <br />
                 </div>
