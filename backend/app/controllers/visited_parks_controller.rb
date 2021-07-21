@@ -21,7 +21,8 @@ class VisitedParksController < ApplicationController
 
     private
     def visited_parks_params
-        params.require(:visited_parks).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
+        params.permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
+        # params.require(:visited_parks).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
     end
 
 end

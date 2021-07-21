@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import FavoriteButton from './FavoriteButton';
+import VisitedButton from './VisitedButton';
 
 class AllParkCard extends Component {
     render() {
@@ -19,6 +20,7 @@ class AllParkCard extends Component {
                     <p>Operating Hours: {this.props.operatingHours}</p>
                     <p>Addresses: {this.props.addresses}</p>
                     <FavoriteButton />
+                    <VisitedButton />
                     <br />
                 </div>
             </div>
