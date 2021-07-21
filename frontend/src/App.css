@@ -35,10 +35,6 @@ button {
   cursor: pointer;
 }
 
-/* h1 {
-  text-shadow: 2px 2px 5px #3C3B6E;
-} */
-
 .Wrapper {
   text-align: center;
   color: #FEFEFE;
@@ -59,20 +55,6 @@ button {
   background: rgba(0, 0, 0, 0.6);
   /* width: 650px; */
   padding: 15px;
-}
-
-.AllParksListDiv {
-  text-align: center;
-  border-radius: 25px;
-  border-color: #3C3B6E;
-  border-style: solid;
-  /* width: 475px; */
-  padding: 15px;
-}
-
-.AllParksListDivTopLevel {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 25px;
 }
 
 .card {

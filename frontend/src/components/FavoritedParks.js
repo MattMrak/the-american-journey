@@ -12,7 +12,7 @@ class FavoritedParks extends Component {
     }
 
     render() {
-        const favoritedParksNames = this.props.favoritedParks.map(park => (
+        const favoritedParksList = this.props.favoritedParks.map(park => (
             < FavoritedParkCard
                 fullName={park.fullName}
                 description={park.description}
@@ -20,15 +20,13 @@ class FavoritedParks extends Component {
                 entranceFees={park.entranceFees}
                 operatingHours={park.operatingHours}
                 addresses={park.addresses}
-                />
+            />
         ))
         return (
             <div>
                 <header className="App-header">
-                    <div className="FavoritedParksListDivTopLevel">
-                        <div className="FavoritedParksListDiv">
-                            {favoritedParksNames}
-                        </div>
+                    <div className="FavoritedParksList">
+                        {favoritedParksList}
                     </div>
                 </header>
                 <Footer/>
