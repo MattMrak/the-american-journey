@@ -9,7 +9,7 @@ class DeleteButton extends Component {
         visitedParks: [],
         favoritedParks: []
     }
-    
+
     handleDelete = (evt) => {
         this.setState({
             [evt.target.id]: evt.target.id
