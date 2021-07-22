@@ -11,6 +11,7 @@ import visitedParksReducer from './reducers/visitedParksReducer';
 import visitedButtonReducer from './reducers/visitedButtonReducer';
 import favoritedParksReducer from './reducers/favoritedParksReducer';
 import favoriteButtonReducer from './reducers/favoriteButtonReducer';
+import deleteButtonReducer from './reducers/deleteButtonReducer';
 // import reportWebVitals from './reportWebVitals';
 
 const rootReducer = combineReducers({
@@ -19,7 +20,8 @@ const rootReducer = combineReducers({
   visitedParksReducer: visitedParksReducer,
   visitedButtonReducer: visitedButtonReducer,
   favoritedParksReducer: favoritedParksReducer,
-  favoriteButtonReducer: favoriteButtonReducer
+  favoriteButtonReducer: favoriteButtonReducer,
+  deleteButtonReducer: deleteButtonReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
