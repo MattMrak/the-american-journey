@@ -69,3 +69,15 @@ button {
   /* height: 400px; */
   /* margin: 100px; */
 }
+
+.login-signup {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  border-color: #3C3B6E;
+  border-style: solid;
+  /* padding: 15px; */
+  /* display: inline-block; */
+  width: 275px;
+  height: 275px;
+}

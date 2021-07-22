@@ -26,8 +26,8 @@ class Login extends Component {
         return (
             <div>
               <header className="App-header">
-                <h1>Login</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="login-signup">
+                    <h1>Login</h1>
                     <label htmlFor="user"></label>
                     <input
                         onChange={this.handleChange}
