@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import '../App.css';
 import {connect} from "react-redux"
-import { fetchDeleteVisitedPark, fetchDeleteFavPark } from '../actions/deleteButton';
+import { fetchDeleteFavPark } from '../actions/deleteFavoritedButton';
 
-class DeleteButton extends Component {
+class DeleteFavoritedButton extends Component {
 
     state = {
-        visitedParks: [],
         favoritedParks: []
     }
 
@@ -14,7 +13,6 @@ class DeleteButton extends Component {
         this.setState({
             [evt.target.id]: evt.target.id
         })
-        this.props.fetchDeleteVisitedPark()
         this.props.fetchDeleteFavPark()
     }
     
@@ -29,9 +27,8 @@ class DeleteButton extends Component {
 
 // const mapStateToProps = (stateFromStore) => {
 //     return {
-//         visitedParks: stateFromStore.visitedParksReducer.visitedParks
 //         favoritedParks: stateFromStore.favoritedParksReducer.favoritedParks
 //     }
 // }
 
-export default connect(null, { fetchDeleteVisitedPark, fetchDeleteFavPark })(DeleteButton)
+export default connect(null, { fetchDeleteFavPark })(DeleteFavoritedButton)

@@ -1,15 +1,9 @@
 const initialState = {
-    visitedParks: [],
     favoritedParks: []
 }
 
-const deleteButtonReducer = (state = initialState, action) => {
+const deleteFavoritedButtonReducer = (state = initialState, action) => {
     switch(action.type){
-        case "DELETE_VISITED_PARK":
-            return {
-                ...state,
-                visitedParks: [state.visitedParks.filter(park => park !== action.payload)]
-            }
         case "DELETE_FAVORITED_PARK":
             return {
                 ...state,
@@ -20,4 +14,4 @@ const deleteButtonReducer = (state = initialState, action) => {
     }
 }
 
-export default deleteButtonReducer;
+export default deleteFavoritedButtonReducer;
