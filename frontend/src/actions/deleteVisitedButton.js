@@ -1,6 +1,6 @@
 export const fetchDeleteVisitedPark = () => {
     return (dispatch) => {
-      fetch('http://localhost:3001/visited_parks', {
+      fetch('http://localhost:3001/visited_parks/:id', {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json',

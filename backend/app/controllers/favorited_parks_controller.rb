@@ -19,6 +19,7 @@ class FavoritedParksController < ApplicationController
   end
 
   def destroy
+    @favorited_park = FavoritedPark.find(params[:id])
     @favorited_park.destroy
   end
 
