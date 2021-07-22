@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import FavoriteButton from './FavoriteButton';
+import DeleteButton from './DeleteButton';
 
 class VisitedParkCard extends Component {
     render() {
@@ -19,7 +20,7 @@ class VisitedParkCard extends Component {
                     <p>Operating Hours: {this.props.operatingHours}</p>
                     <p>Addresses: {this.props.addresses}</p>
                     <FavoriteButton />
-                    <button>Delete</button>
+                    <DeleteButton />
                     <br />
                 </div>
             </div>
