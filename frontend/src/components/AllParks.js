@@ -17,6 +17,8 @@ class AllParks extends Component {
     render() {
         const allParksList = this.props.allParks.map(park => (
             < AllParkCard
+                key={park.data[0].id}
+                id={park.data[0].id}
                 fullName={park.data[0].fullName}
                 description={park.data[0].description}
                 contacts={park.data[0].contacts.phoneNumbers[0].phoneNumber}

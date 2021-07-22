@@ -14,6 +14,8 @@ class FavoritedParks extends Component {
     render() {
         const favoritedParksList = this.props.favoritedParks.map(park => (
             < FavoritedParkCard
+                key={park.id}
+                id={park.id}
                 fullName={park.fullName}
                 description={park.description}
                 contacts={park.contacts}

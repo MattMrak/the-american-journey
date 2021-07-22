@@ -14,6 +14,8 @@ class VisitedParks extends Component {
     render() {
         const visitedParksList = this.props.visitedParks.map(park => (
             < VisitedParkCard
+                key={park.id}
+                id={park.id}
                 fullName={park.fullName}
                 description={park.description}
                 contacts={park.contacts}
