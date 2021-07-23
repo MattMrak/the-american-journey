@@ -18,7 +18,7 @@ class VisitedParksController < ApplicationController
     # FrontEnd's DELETE fetch request hits here which means it should be working correctly
     # """ @visited_park = VisitedPark.find(params[:id]) """ gives the error """ ActiveRecord::RecordNotFound (Couldn't find VisitedPark with 'id'=:id): """
     def destroy
-        binding.pry
+        # binding.pry
         @visited_park = VisitedPark.find(params[:id])
         @visited_park.destroy
     end

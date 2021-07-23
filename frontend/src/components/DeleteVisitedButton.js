@@ -10,6 +10,7 @@ class DeleteVisitedButton extends Component {
     }
 
     handleDelete = (evt) => {
+        evt.preventDefault()
         this.setState({
             [evt.target.id]: evt.target.id
         })
