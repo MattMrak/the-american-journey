@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
 import '../App.css';
+import { Redirect } from 'react-router-dom'
 class Logout extends Component {
+
+    state = {
+        navigate: false
+    }
+
+    logout = () => {
+        localStorage.clear("token")
+        this.setState({navigate: true})
+    }
+
     render() {
+
+        const {navigate} = this.state
+
+        if (navigate) {
+            return <Redirect to="/" push={true} />
+        }
+
         return (
-            <div>
-                <header className="App-header">
-                    <h1>Logout</h1>
-                </header>
-            </div>
+            <button onClick={this.logout}>Logout</button>
         );
     }
 }

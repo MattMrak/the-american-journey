@@ -1,6 +1,7 @@
 import React from 'react';
 import '../NavBar.css';
 import { NavLink } from 'react-router-dom';
+import Logout from './Logout'
 
 const NavBar = () => {
   return (
@@ -19,7 +20,7 @@ const NavBar = () => {
           <NavLink to="/favoritedparks">Favorited Parks</NavLink>
         </li>
         <li>
-          <NavLink to="/logout">Logout</NavLink>
+          <Logout />
         </li>
       </ul>
     </div>

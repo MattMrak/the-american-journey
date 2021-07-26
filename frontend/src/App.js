@@ -2,7 +2,6 @@ import './App.css';
 import React, { Component } from 'react';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
-import Logout from './components/Logout';
 import Welcome from './components/Welcome';
 import Signup from './components/Signup';
 import Login from './components/Login';
@@ -45,7 +44,6 @@ class App extends Component {
             <Route path="/allparks" component={AllParks}></Route>
             <Route path="/favoritedparks" component={FavoritedParks}></Route>
             <Route path="/visitedparks" component={VisitedParks}></Route>
-            <Route path="/logout" component={Logout}></Route>
           </Switch>
         </Router>
         <Footer/>
