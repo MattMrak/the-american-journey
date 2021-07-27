@@ -7,7 +7,7 @@ const initialState = {
         case "GET_VISITED_PARKS":
             return {
                 ...state,
-                visitedParks: [...state.visitedParks, ...action.payload]
+                visitedParks: [...action.payload]
             }
             default: 
             return state

@@ -7,7 +7,7 @@ const favoritedParksReducer = (state = initialState, action) => {
       case "GET_FAVORITED_PARKS":
           return {
               ...state,
-              favoritedParks: [...state.favoritedParks, ...action.payload]
+              favoritedParks: [...action.payload]
           }
           default: 
           return state
