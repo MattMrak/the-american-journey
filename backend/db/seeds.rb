@@ -6,14 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-AllPark.destroy_all
-AllPark.reset_pk_sequence
 FavoritedPark.destroy_all
 FavoritedPark.reset_pk_sequence
 VisitedPark.destroy_all
 VisitedPark.reset_pk_sequence
-
-AllPark.create(fullName: "Garfield Grove", description: "Hidden gem in the heart of Franklin Square", contacts: "516-790-9462", entranceFees: "$5.00", operatingHours: "9am - 5pm", addresses: "902 Garfield Street, Franklin Square, NY 11010")
 
 FavoritedPark.create(fullName: "Garfield Grove", description: "Hidden gem in the heart of Franklin Square", contacts: "516-790-9462", entranceFees: "$5.00", operatingHours: "9am - 5pm", addresses: "902 Garfield Street, Franklin Square, NY 11010")
 

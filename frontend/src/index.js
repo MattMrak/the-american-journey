@@ -5,7 +5,6 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
-import userReducer from './reducers/userReducer';
 import allParksReducer from './reducers/allParksReducer';
 import visitedParksReducer from './reducers/visitedParksReducer';
 import visitedButtonReducer from './reducers/visitedButtonReducer';
@@ -16,7 +15,6 @@ import deleteFavoritedButtonReducer from './reducers/deleteFavoritedButtonReduce
 // import reportWebVitals from './reportWebVitals';
 
 const rootReducer = combineReducers({
-  currentUser: userReducer,
   allParksReducer: allParksReducer,
   visitedParksReducer: visitedParksReducer,
   visitedButtonReducer: visitedButtonReducer,

@@ -1,5 +1,4 @@
 class VisitedParksController < ApplicationController
-    before_action :set_visited_park, only: %i[show destroy]
 
     def index
         @visited_parks = VisitedPark.all
@@ -7,6 +6,7 @@ class VisitedParksController < ApplicationController
     end
 
     def show
+        @visited_park = VisitedPark.all
         render json: @visited_park, status: 200
     end
     
@@ -20,14 +20,11 @@ class VisitedParksController < ApplicationController
     # """ @visited_park = VisitedPark.find(params[:id]) """ gives the error """ ActiveRecord::RecordNotFound (Couldn't find VisitedPark with 'id'=:id): """
     def destroy
         # binding.pry
+        @visited_park = VisitedPark.find(params[:id])
         @visited_park.destroy
     end
 
     private
-
-    def set_visited_park
-        @visited_park = VisitedPark.find(params[:id])
-    end
 
     def visited_parks_params
         params.permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)

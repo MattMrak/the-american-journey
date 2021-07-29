@@ -1,13 +1,12 @@
-class CreateAllParks < ActiveRecord::Migration[6.1]
+class CreateVisitedParks < ActiveRecord::Migration[6.1]
     def change
-      create_table :all_parks do |t|
+      create_table :visited_parks do |t|
         t.string :fullName
         t.string :description
         t.string :contacts
         t.string :entranceFees
         t.string :operatingHours
         t.string :addresses
-        # t.integer :user_id
       end
     end
 end
