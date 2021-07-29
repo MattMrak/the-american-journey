@@ -10,6 +10,7 @@ class FavoriteButton extends Component {
     }
     
     handleFavorite = (evt) => {
+        evt.preventDefault()
         this.setState({
             [evt.target.id]: evt.target.id
         })

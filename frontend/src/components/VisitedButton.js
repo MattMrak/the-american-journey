@@ -10,6 +10,7 @@ class VisitedButton extends Component {
     }
     
     handleVisited = (evt) => {
+        evt.preventDefault()
         this.setState({
             [evt.target.id]: evt.target.id
         })
