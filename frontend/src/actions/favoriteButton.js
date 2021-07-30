@@ -1,4 +1,4 @@
-export const fetchPostFavParks = () => {
+export const fetchPostFavParks = (park) => {
     return (dispatch) => {
       fetch('http://localhost:3001/favorited_parks', {
         method: 'POST',
@@ -7,12 +7,11 @@ export const fetchPostFavParks = () => {
             'Content-Type': 'application/json',
         },
             body: JSON.stringify({
-                // favoritedParks: ""
+              favorited_parks: park
             }),
         })
         .then(resp => resp.json())
         .then(favoritedParks => {
-          // debugger
           dispatch({
             type: "POST_FAVORITED_PARKS",
             payload: favoritedParks

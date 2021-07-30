@@ -1,4 +1,4 @@
-export const fetchPostVisitedParks = () => {
+export const fetchPostVisitedParks = (park) => {
     return (dispatch) => {
       fetch('http://localhost:3001/visited_parks', {
         method: 'POST',
@@ -7,7 +7,7 @@ export const fetchPostVisitedParks = () => {
             'Content-Type': 'application/json',
         },
             body: JSON.stringify({
-                // visitedParks: ""
+              visited_parks: park
             }),
         })
         .then(resp => resp.json())

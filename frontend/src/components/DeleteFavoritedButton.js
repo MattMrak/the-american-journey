@@ -14,7 +14,7 @@ class DeleteFavoritedButton extends Component {
         this.setState({
             [evt.target.id]: evt.target.id
         })
-        this.props.fetchDeleteFavPark()
+        this.props.fetchDeleteFavPark(this.props.id)
     }
     
     render() {

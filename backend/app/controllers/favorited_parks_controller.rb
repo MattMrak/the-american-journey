@@ -19,13 +19,13 @@ class FavoritedParksController < ApplicationController
   def destroy
     @favorited_park = FavoritedPark.find(params[:id])
     @favorited_park.destroy
+    render json: @favorited_park, status: 200
   end
 
   private
 
   def favorited_park_params
-    params.permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
-    # params.require(:favorited_parks).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
+    params.require(:favorited_parks).permit(:id, :fullName, :description, :contacts, :entranceFees, :operatingHours, :addresses)
   end
 
 end

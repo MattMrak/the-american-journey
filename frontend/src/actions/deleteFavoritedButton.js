@@ -1,13 +1,13 @@
-export const fetchDeleteFavPark = () => {
+export const fetchDeleteFavPark = (id) => {
     return (dispatch) => {
-        fetch('http://localhost:3001/favorited_parks/:id', {
+        fetch(`http://localhost:3001/favorited_parks/${id}`, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
             body: JSON.stringify({
-                // favoritedParks: ""
+                id: id
             }),
         })
         .then(resp => resp.json())

@@ -14,7 +14,15 @@ class VisitedButton extends Component {
         this.setState({
             [evt.target.id]: evt.target.id
         })
-        this.props.fetchPostVisitedParks()
+        const park = {
+            fullName: this.props.fullName,
+            description: this.props.description,
+            contacts: this.props.contacts,
+            entranceFees: this.props.entranceFees,
+            operatingHours: this.props.operatingHours,
+            addresses: this.props.addresses
+        }
+        this.props.fetchPostVisitedParks(park)
     }
     
     render() {
@@ -25,11 +33,5 @@ class VisitedButton extends Component {
         );
     }
 }
-
-// const mapStateToProps = (stateFromStore) => {
-//     return {
-//         visitedParks: stateFromStore.visitedParksReducer.visitedParks
-//     }
-// }
 
 export default connect(null, { fetchPostVisitedParks })(VisitedButton)

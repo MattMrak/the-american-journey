@@ -14,22 +14,24 @@ class FavoriteButton extends Component {
         this.setState({
             [evt.target.id]: evt.target.id
         })
-        this.props.fetchPostFavParks()
+        const park = {
+            fullName: this.props.fullName,
+            description: this.props.description,
+            contacts: this.props.contacts,
+            entranceFees: this.props.entranceFees,
+            operatingHours: this.props.operatingHours,
+            addresses: this.props.addresses
+        }
+        this.props.fetchPostFavParks(park)
     }
     
     render() {
         return (
             <div>
-                <button onClick={this.handleFavorite}>Favorite</button>
+                <button onClick={this.handleFavorite} >Favorite</button>
             </div>
         );
     }
 }
-
-// const mapStateToProps = (stateFromStore) => {
-//     return {
-//         favoritedParks: stateFromStore.favoritedParksReducer.favoritedParks
-//     }
-// }
 
 export default connect(null, { fetchPostFavParks })(FavoriteButton)

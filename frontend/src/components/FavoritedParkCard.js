@@ -19,8 +19,19 @@ class FavoritedParkCard extends Component {
                     <p>Entrance Fees: {this.props.entranceFees}</p>
                     <p>Operating Hours: {this.props.operatingHours}</p>
                     <p>Addresses: {this.props.addresses}</p>
-                    <VisitedButton />
-                    <DeleteFavoritedButton />
+                    <VisitedButton 
+                        key={this.props.id}
+                        id={this.props.id}
+                        fullName={this.props.fullName}
+                        description={this.props.description}
+                        contacts={this.props.contacts}
+                        entranceFees={this.props.entranceFees}
+                        operatingHours={this.props.operatingHours}
+                        addresses={this.props.addresses}
+                    />
+                    <DeleteFavoritedButton 
+                        id={this.props.id}
+                    />
                     <br />
                 </div>
             </div>
