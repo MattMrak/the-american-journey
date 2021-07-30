@@ -7,7 +7,6 @@ const allParksReducer = (state = initialState, action) => {
         case "GET_PARKS":
             return {
                 ...state,
-                // allParks: [...state.allParks, action.payload]
                 allParks: [action.payload]
             }
             default: 

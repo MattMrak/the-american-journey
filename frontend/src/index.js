@@ -7,21 +7,13 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import allParksReducer from './reducers/allParksReducer';
 import visitedParksReducer from './reducers/visitedParksReducer';
-import visitedButtonReducer from './reducers/visitedButtonReducer';
 import favoritedParksReducer from './reducers/favoritedParksReducer';
-import favoriteButtonReducer from './reducers/favoriteButtonReducer';
-import deleteVisitedButtonReducer from './reducers/deleteVisitedButtonReducer';
-import deleteFavoritedButtonReducer from './reducers/deleteFavoritedButtonReducer';
 // import reportWebVitals from './reportWebVitals';
 
 const rootReducer = combineReducers({
   allParksReducer: allParksReducer,
   visitedParksReducer: visitedParksReducer,
-  visitedButtonReducer: visitedButtonReducer,
-  favoritedParksReducer: favoritedParksReducer,
-  favoriteButtonReducer: favoriteButtonReducer,
-  deleteVisitedButtonReducer: deleteVisitedButtonReducer,
-  deleteFavoritedButtonReducer: deleteFavoritedButtonReducer
+  favoritedParksReducer: favoritedParksReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

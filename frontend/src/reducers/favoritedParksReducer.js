@@ -9,6 +9,11 @@ const favoritedParksReducer = (state = initialState, action) => {
               ...state,
               favoritedParks: [...action.payload]
           }}
+      case "POST_FAVORITED_PARKS": {
+          return {
+            ...state,
+            favoritedParks: [action.payload]
+        }}
       case "DELETE_FAVORITED_PARK": {
           return {
               ...state,
