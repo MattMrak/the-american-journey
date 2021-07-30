@@ -21,7 +21,7 @@ class VisitedParksController < ApplicationController
     # """ @visited_park = VisitedPark.find(params[:id]) """ gives the error """ ActiveRecord::RecordNotFound (Couldn't find VisitedPark with 'id'=:id): """
     def destroy
         # binding.pry
-        @visited_park = VisitedPark.find(params[:id])
+        @visited_park = VisitedPark.find_by_id(params[:id])
         @visited_park.destroy
     end
 
