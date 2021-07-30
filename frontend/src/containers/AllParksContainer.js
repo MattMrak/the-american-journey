@@ -16,16 +16,20 @@ class AllParksContainer extends Component {
     }
     
     render() {
-        const allParksList = this.props.allParks.map(park => (
+        
+        // asynchronous 
+        const allParksList = this.props.allParks.length >0 && this.props.allParks[0].data.map(park => (
             < AllParkCard
-                key={park.data[0].id}
-                id={park.data[0].id}
-                fullName={park.data[0].fullName}
-                description={park.data[0].description}
-                contacts={park.data[0].contacts.phoneNumbers[0].phoneNumber}
-                entranceFees={park.data[0].entranceFees[0].cost}
-                operatingHours={park.data[0].operatingHours[0].standardHours.wednesday}
-                addresses={park.data[0].addresses[0].line1}
+                key={park.id}
+                id={park.id}
+                fullName={park.fullName}
+                description={park.description}
+                contacts={park.contacts.phoneNumbers[0].phoneNumber}
+                entranceFees={park.entranceFees[0].cost}
+                operatingHours={park.operatingHours[0].standardHours.wednesday}
+                addresses={Object.values(park.addresses[0]).reduce((acc, currentValue) => {
+                    return (acc.concat(" ", currentValue))
+                }, "")}
             />
         ))
         return (

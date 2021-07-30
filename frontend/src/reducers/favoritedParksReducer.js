@@ -12,7 +12,7 @@ const favoritedParksReducer = (state = initialState, action) => {
       case "DELETE_FAVORITED_PARK": {
           return {
               ...state,
-              favoritedParks: [state.favoritedParks.filter(park => park.id !== action.payload.id)]
+              favoritedParks: [...state.favoritedParks.filter(park => park.id !== action.payload.id)]
         }}
           default: 
           return state

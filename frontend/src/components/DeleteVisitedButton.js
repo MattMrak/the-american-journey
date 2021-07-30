@@ -14,7 +14,7 @@ class DeleteVisitedButton extends Component {
         this.setState({
             [evt.target.id]: evt.target.id
         })
-        this.props.fetchDeleteVisitedPark()
+        this.props.fetchDeleteVisitedPark(this.props.id)
     }
     
     render() {
@@ -25,11 +25,5 @@ class DeleteVisitedButton extends Component {
         );
     }
 }
-
-// const mapStateToProps = (stateFromStore) => {
-//     return {
-//         visitedParks: stateFromStore.visitedParksReducer.visitedParks
-//     }
-// }
 
 export default connect(null, { fetchDeleteVisitedPark })(DeleteVisitedButton)

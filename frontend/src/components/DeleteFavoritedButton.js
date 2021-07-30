@@ -26,10 +26,4 @@ class DeleteFavoritedButton extends Component {
     }
 }
 
-// const mapStateToProps = (stateFromStore) => {
-//     return {
-//         favoritedParks: stateFromStore.favoritedParksReducer.favoritedParks
-//     }
-// }
-
 export default connect(null, { fetchDeleteFavPark })(DeleteFavoritedButton)
