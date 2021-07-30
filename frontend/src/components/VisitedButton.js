@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import {connect} from "react-redux"
-import { fetchPostVisitedParks } from '../actions/visitedButton';
+import { fetchPostVisitedParks } from '../actions/visitedParks';
 
 class VisitedButton extends Component {
 
