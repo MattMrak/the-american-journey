@@ -6,8 +6,9 @@ class VisitedParksController < ApplicationController
     end
 
     def show
+        @visited_park = VisitedPark.find(params[:id])
         @visited_park = VisitedPark.all
-        render json: @visited_park, status: 200
+        render json: @visited_parks, status: 200
     end
     
     def create

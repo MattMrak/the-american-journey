@@ -11,7 +11,8 @@ class FavoritedParksController < ApplicationController
   end
 
   def show
-    @favorited_parks = FavoritedPark.all
+    @favorited_park = FavoritedPark.find(params[:id])
+    @favorited_park = FavoritedPark.all
     render json: @favorited_parks, status: 200
   end
 
