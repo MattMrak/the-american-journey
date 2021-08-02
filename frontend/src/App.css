@@ -9,9 +9,7 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
   background-image: url("https://wallpaperaccess.com/full/1302149.jpg");
-  /* background-image: url("https://c4.wallpaperflare.com/wallpaper/382/231/775/yosemite-valley-el-capitan-united-states-california-wallpaper-preview.jpg"); */
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -38,14 +36,9 @@ button {
 .Wrapper {
   text-align: center;
   color: #FEFEFE;
-  /* color: linear-gradient(#B42033, #FEFEFE, #3C3B6E);   */
   position: fixed;
   bottom: 0;
   width: 100%;
-  /* text-transform: uppercase; */
-	/* background: linear-gradient(#B42033, #FEFEFE, #3C3B6E);
-	background-clip: text;
-	-webkit-text-fill-color: transparent; */
 }
 
 .app-descr {
@@ -53,7 +46,6 @@ button {
   border-style: solid;
   border-radius: 25px;
   background: rgba(0, 0, 0, 0.6);
-  /* width: 650px; */
   padding: 15px;
 }
 
@@ -64,8 +56,4 @@ button {
   border-color: #3C3B6E;
   border-style: solid;
   padding: 15px;
-  /* display: inline-block; */
-  /* width: 500px; */
-  /* height: 400px; */
-  /* margin: 100px; */
 }

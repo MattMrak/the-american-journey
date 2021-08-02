@@ -17,7 +17,6 @@ class AllParksContainer extends Component {
     
     render() {
         
-        // asynchronous 
         const allParksList = this.props.allParks.length >0 && this.props.allParks[0].data.map(park => (
             < AllParkCard
                 key={park.id}

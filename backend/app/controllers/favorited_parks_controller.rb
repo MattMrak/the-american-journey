@@ -5,15 +5,15 @@ class FavoritedParksController < ApplicationController
     render json: @favorited_parks, status: 200
   end
 
-  def create
-    @favorited_park = FavoritedPark.create(favorited_park_params)
-    render json: @favorited_parks, status: 200
-  end
-
   def show
     @favorited_park = FavoritedPark.find(params[:id])
     @favorited_park = FavoritedPark.all
     render json: @favorited_parks, status: 200
+  end
+  
+  def create
+    @favorited_park = FavoritedPark.create(favorited_park_params)
+    render json: @favorited_park, status: 200
   end
 
   def destroy

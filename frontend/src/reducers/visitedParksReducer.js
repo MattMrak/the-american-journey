@@ -17,7 +17,7 @@ const initialState = {
         case "DELETE_VISITED_PARK": {
           return {
                 ...state,
-                visitedParks: [state.visitedParks.filter(park => park.id !== action.payload.id)]
+                visitedParks: [...state.visitedParks.filter(park => park.id !== action.payload.id)]
           }}
             default: 
             return state

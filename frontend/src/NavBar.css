@@ -5,16 +5,7 @@ ul {
   overflow: hidden;
   background-color: #FEFEFE;
   position: fixed;
-  width: 100%;
-
-  /* position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-
-  position: fixed;
-  top: 0;
-  width: 100%; */
-  
+  width: 100%;  
 }
 
 li {
@@ -23,15 +14,12 @@ li {
 
 li a {
   display: block;
-  /* color: #696969; */
   color: #a9a9a9;  
-  /* color: black;  */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #B42033;
 }
