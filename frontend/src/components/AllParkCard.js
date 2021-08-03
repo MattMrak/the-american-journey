@@ -14,11 +14,11 @@ class AllParkCard extends Component {
                             }}
                 >
                     <h1>{this.props.fullName}</h1>
-                    <p>Description: {this.props.description}</p>
-                    <p>Contacts: {this.props.contacts}</p>
-                    <p>Entrance Fee: ${this.props.entranceFees}</p>
-                    <p>Operating Hours: {this.props.operatingHours}</p>
-                    <p>Address: {this.props.addresses}</p>
+                    <h4>Description:</h4> <p>{this.props.description}</p>
+                    <h4>Contacts:</h4> <p>{this.props.contacts}</p>
+                    <h4>Entrance Fee:</h4> <p>${this.props.entranceFees}</p>
+                    <h4>Operating Hours:</h4> <p>{this.props.operatingHours}</p>
+                    <h4>Address:</h4> <p>{this.props.addresses}</p>
                     <FavoriteButton 
                         key={this.props.id}
                         id={this.props.id}

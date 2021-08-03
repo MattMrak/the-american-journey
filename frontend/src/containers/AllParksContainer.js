@@ -25,9 +25,11 @@ class AllParksContainer extends Component {
                 description={park.description}
                 contacts={park.contacts.phoneNumbers[0].phoneNumber}
                 entranceFees={park.entranceFees[0].cost}
-                operatingHours={park.operatingHours[0].standardHours.wednesday}
+                operatingHours={Object.values(park.operatingHours[0].description).reduce((acc, currentValue) => {
+                    return (acc.concat("", currentValue))
+                }, "")}
                 addresses={Object.values(park.addresses[0]).reduce((acc, currentValue) => {
-                    return (acc.concat(" ", currentValue))
+                    return (acc.concat(" ".split("").reverse().join(""), currentValue))
                 }, "")}
             />
         ))
