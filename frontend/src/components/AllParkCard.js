@@ -7,7 +7,6 @@ import { withRouter } from "react-router";
 
 class AllParkCard extends Component {
     render() {
-        console.log(this.props.id)
         return (
             <div className="card">
                 <div 

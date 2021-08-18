@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../App.css';
 import FavoriteButton from './FavoriteButton';
 import DeleteVisitedButton from './DeleteVisitedButton';
+import { withRouter } from "react-router";
+import ViewOnlyVisitedButton from './ViewOnlyVisitedButton';
 
 class VisitedParkCard extends Component {
     render() {
@@ -32,6 +34,16 @@ class VisitedParkCard extends Component {
                     <DeleteVisitedButton 
                         id={this.props.id}
                     />
+                    <ViewOnlyVisitedButton
+                        key={this.props.id}
+                        id={this.props.id}
+                        fullName={this.props.fullName}
+                        description={this.props.description}
+                        contacts={this.props.contacts}
+                        entranceFees={this.props.entranceFees}
+                        operatingHours={this.props.operatingHours}
+                        addresses={this.props.addresses}
+                        />
                     <br />
                 </div>
             </div>
@@ -39,4 +51,4 @@ class VisitedParkCard extends Component {
     }
 }
 
-export default VisitedParkCard;
+export default withRouter(VisitedParkCard);

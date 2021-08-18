@@ -11,21 +11,29 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 class App extends Component {
   state = {
     allParks: [],
+    visitedParks: [],
     favoritedParks: []
   }
   componentDidMount(){
-    fetch("http://localhost:3001/favorited_parks")
-      .then(resp => resp.json())
-      .then(json => {
-        this.setState({
-          favoritedParks: json
-        })
-      })
     fetch("http://localhost:3001/all_parks")
       .then(resp => resp.json())
       .then(json => {
         this.setState({
           allParks: json
+        })
+      })
+    fetch("http://localhost:3001/visited_parks")
+      .then(resp => resp.json())
+      .then(json => {
+        this.setState({
+          visitedParks: json
+        })
+      })
+    fetch("http://localhost:3001/favorited_parks")
+      .then(resp => resp.json())
+      .then(json => {
+        this.setState({
+          favoritedParks: json
         })
       })
   }
@@ -44,7 +52,10 @@ class App extends Component {
               const favoritedParksJSX = <FavoritedParks favoritedParks={this.state.favoritedParks} /> 
               return (this.state.favoritedParks.length > 0 ? favoritedParksJSX : <h1>Loading...</h1>)
             }}></Route>
-            <Route path="/visitedparks" component={VisitedParks}></Route>
+            <Route path="/visitedparks" component={() => {
+              const visitedParksJSX = <VisitedParks visitedParks={this.state.visitedParks} /> 
+              return (this.state.visitedParks.length > 0 ? visitedParksJSX : <h1>Loading...</h1>)
+            }}></Route>
           </Switch>
         </Router>
         <Footer/>
