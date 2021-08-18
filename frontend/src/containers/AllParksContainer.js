@@ -17,10 +17,10 @@ class AllParksContainer extends Component {
     
     render() {
         
-        const allParksList = this.props.allParks.length >0 && this.props.allParks[0].data.map(park => (
+        const allParksList = this.props.allParks.length >0 && this.props.allParks[0].data.map((park,index) => (
             < AllParkCard
-                key={park.id}
-                id={park.id}
+                key={index}
+                id={index}
                 fullName={park.fullName}
                 description={park.description}
                 contacts={park.contacts.phoneNumbers[0].phoneNumber}

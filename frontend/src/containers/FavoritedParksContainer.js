@@ -4,17 +4,13 @@ import Footer from '../components/Footer';
 import {connect} from "react-redux"
 import { fetchFavoritedParks } from '../actions/favoritedParks';
 import FavoritedParkCard from '../components/FavoritedParkCard';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 class FavoritedParksContainer extends Component {
-
-    state = {
-        favoritedParks: []
-    }
-
     componentDidMount() {
         this.props.fetchFavoritedParks()
     }
-
     render() {
         const favoritedParksList = this.props.favoritedParks.map(park => (
             < FavoritedParkCard
@@ -32,7 +28,25 @@ class FavoritedParksContainer extends Component {
             <div>
                 <header className="App-header">
                     <div className="FavoritedParksList">
-                        {favoritedParksList}
+                        <Switch>
+                            <Route exact path="/favoritedparks">
+                                {favoritedParksList}
+                            </Route>
+                            <Route path="/favoritedparks/:id" component={(routeInfo) => {
+                                const paramsId = parseInt(routeInfo.match.params.id)
+                                const foundFavoritedPark = this.props.favoritedParks.find(park => park.id === paramsId)
+                                return <FavoritedParkCard 
+                                key={foundFavoritedPark.id}
+                                id={foundFavoritedPark.id}
+                                fullName={foundFavoritedPark.fullName}
+                                description={foundFavoritedPark.description}
+                                contacts={foundFavoritedPark.contacts}
+                                entranceFees={foundFavoritedPark.entranceFees}
+                                operatingHours={foundFavoritedPark.operatingHours}
+                                addresses={foundFavoritedPark.addresses}
+                                /> }}>
+                            </Route>
+                        </Switch>
                     </div>
                 </header>
                 <Footer/>
@@ -47,4 +61,4 @@ const mapStateToProps = (stateFromStore) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchFavoritedParks })(FavoritedParksContainer)
+export default withRouter(connect(mapStateToProps, { fetchFavoritedParks })(FavoritedParksContainer))

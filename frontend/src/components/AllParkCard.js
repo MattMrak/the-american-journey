@@ -5,6 +5,7 @@ import VisitedButton from './VisitedButton';
 
 class AllParkCard extends Component {
     render() {
+        console.log(this.props.id)
         return (
             <div className="card">
                 <div 
@@ -28,7 +29,7 @@ class AllParkCard extends Component {
                         entranceFees={this.props.entranceFees}
                         operatingHours={this.props.operatingHours}
                         addresses={this.props.addresses}
-                    />
+                        />
                     <VisitedButton 
                         key={this.props.id}
                         id={this.props.id}
@@ -38,7 +39,7 @@ class AllParkCard extends Component {
                         entranceFees={this.props.entranceFees}
                         operatingHours={this.props.operatingHours}
                         addresses={this.props.addresses}
-                    />
+                        />
                     <br />
                 </div>
             </div>

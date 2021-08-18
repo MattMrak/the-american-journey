@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../App.css';
+import ViewOnlyButton from './ViewOnlyButton';
 import VisitedButton from './VisitedButton';
 import DeleteFavoritedButton from './DeleteFavoritedButton';
+import { withRouter } from "react-router";
 
 class FavoritedParkCard extends Component {
     render() {
@@ -32,6 +34,16 @@ class FavoritedParkCard extends Component {
                     <DeleteFavoritedButton 
                         id={this.props.id}
                     />
+                    <ViewOnlyButton
+                        key={this.props.id}
+                        id={this.props.id}
+                        fullName={this.props.fullName}
+                        description={this.props.description}
+                        contacts={this.props.contacts}
+                        entranceFees={this.props.entranceFees}
+                        operatingHours={this.props.operatingHours}
+                        addresses={this.props.addresses}
+                        />
                     <br />
                 </div>
             </div>
@@ -39,4 +51,4 @@ class FavoritedParkCard extends Component {
     }
 }
 
-export default FavoritedParkCard;
+export default withRouter(FavoritedParkCard);

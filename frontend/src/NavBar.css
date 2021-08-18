@@ -4,7 +4,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #FEFEFE;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;  
 }
 
