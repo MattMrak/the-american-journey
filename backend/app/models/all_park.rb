@@ -1,0 +1,3 @@
+class AllPark < ApplicationRecord
+
+end

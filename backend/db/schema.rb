@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 3) do
+
+  create_table "all_parks", force: :cascade do |t|
+    t.string "fullName"
+    t.string "description"
+    t.string "contacts"
+    t.string "entranceFees"
+    t.string "operatingHours"
+    t.string "addresses"
+  end
 
   create_table "favorited_parks", force: :cascade do |t|
     t.string "fullName"

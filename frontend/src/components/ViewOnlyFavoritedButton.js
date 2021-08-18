@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import { withRouter } from "react-router";
 
-class ViewOnlyButton extends Component {
+class ViewOnlyFavoritedButton extends Component {
 
     handleViewOnly = () => {
         this.props.history.push(`/favoritedparks/${this.props.id}`)
@@ -17,4 +17,4 @@ class ViewOnlyButton extends Component {
     }
 }
 
-export default withRouter(ViewOnlyButton);
+export default withRouter(ViewOnlyFavoritedButton);

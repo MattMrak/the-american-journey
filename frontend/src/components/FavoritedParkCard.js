@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import ViewOnlyButton from './ViewOnlyButton';
+import ViewOnlyFavoritedButton from './ViewOnlyFavoritedButton';
 import VisitedButton from './VisitedButton';
 import DeleteFavoritedButton from './DeleteFavoritedButton';
 import { withRouter } from "react-router";
@@ -34,7 +34,7 @@ class FavoritedParkCard extends Component {
                     <DeleteFavoritedButton 
                         id={this.props.id}
                     />
-                    <ViewOnlyButton
+                    <ViewOnlyFavoritedButton
                         key={this.props.id}
                         id={this.props.id}
                         fullName={this.props.fullName}
