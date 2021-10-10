@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import FavoriteButton from './FavoriteButton';
 import VisitedButton from './VisitedButton';
-import ViewOnlyAllParksButton from './ViewOnlyAllParksButton';
-import { withRouter } from "react-router";
 
 class AllParkCard extends Component {
     render() {
@@ -30,7 +28,7 @@ class AllParkCard extends Component {
                         entranceFees={this.props.entranceFees}
                         operatingHours={this.props.operatingHours}
                         addresses={this.props.addresses}
-                        />
+                    />
                     <VisitedButton 
                         key={this.props.id}
                         id={this.props.id}
@@ -40,17 +38,7 @@ class AllParkCard extends Component {
                         entranceFees={this.props.entranceFees}
                         operatingHours={this.props.operatingHours}
                         addresses={this.props.addresses}
-                        />
-                    <ViewOnlyAllParksButton
-                        key={this.props.id}
-                        id={this.props.id}
-                        fullName={this.props.fullName}
-                        description={this.props.description}
-                        contacts={this.props.contacts}
-                        entranceFees={this.props.entranceFees}
-                        operatingHours={this.props.operatingHours}
-                        addresses={this.props.addresses}
-                        />
+                    />
                     <br />
                 </div>
             </div>
@@ -58,4 +46,4 @@ class AllParkCard extends Component {
     }
 }
 
-export default withRouter(AllParkCard);
+export default AllParkCard;

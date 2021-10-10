@@ -15,13 +15,6 @@ class App extends Component {
     favoritedParks: []
   }
   componentDidMount(){
-    fetch("http://localhost:3001/all_parks")
-      .then(resp => resp.json())
-      .then(json => {
-        this.setState({
-          allParks: json
-        })
-      })
     fetch("http://localhost:3001/visited_parks")
       .then(resp => resp.json())
       .then(json => {
@@ -44,18 +37,9 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route path="/allparks" component={() => {
-              const allParksJSX = <AllParks allParks={this.state.allParks} /> 
-              return (this.state.allParks.length > 0 ? allParksJSX : <h1>Loading...</h1>)
-            }}></Route>
-            <Route path="/favoritedparks" component={() => {
-              const favoritedParksJSX = <FavoritedParks favoritedParks={this.state.favoritedParks} /> 
-              return (this.state.favoritedParks.length > 0 ? favoritedParksJSX : <h1>Loading...</h1>)
-            }}></Route>
-            <Route path="/visitedparks" component={() => {
-              const visitedParksJSX = <VisitedParks visitedParks={this.state.visitedParks} /> 
-              return (this.state.visitedParks.length > 0 ? visitedParksJSX : <h1>Loading...</h1>)
-            }}></Route>
+            <Route path="/allparks" component={AllParks}></Route>
+            <Route path="/favoritedparks" component={FavoritedParks}></Route>
+            <Route path="/visitedparks" component={VisitedParks}></Route>
           </Switch>
         </Router>
         <Footer/>

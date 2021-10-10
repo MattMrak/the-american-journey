@@ -1,3 +1,0 @@
-class AllPark < ApplicationRecord
-
-end
